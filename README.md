@@ -20,7 +20,7 @@ npm install
 Roda a aplicação em modo de desenvolvimento.
 Visualizar a url [http://localhost:3000/health-check](http://localhost:3000/health-check).
 
-Visualize a url (http://localhost:3000/api-docs)[http://localhost:3000/api-docs] para visualizar as rodas disponíveis.
+Visualize a url [http://localhost:3000/api-docs](http://localhost:3000/api-docs) para visualizar as rodas disponíveis.
 
 
 ## License
