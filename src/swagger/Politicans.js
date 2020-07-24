@@ -1,6 +1,8 @@
 /**
  * @typedef Evidence
  * @property {string} description.required
+ * @property {string} description.required
+ * @property {string} tweetid
  * @property {string} link.required
  */
 

@@ -13,6 +13,8 @@ var politicanSchema = new Schema({
 	state: { required: true, enum: states, type: String  },
 	evidences: [{
 		description: { required: true, type: String },
+		source: { required: true, type: String },
+		tweetid: { type: String },
 		link: { required: true, type: String }
 	}],
 	pageView: { type: Number, default: 0 }
