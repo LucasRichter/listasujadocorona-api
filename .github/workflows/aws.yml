@@ -21,6 +21,6 @@ jobs:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: ListaSujaCorona-api
-        environment_name: ListaSujaCorona-prod
-        region: us-west-2
+        environment_name: ListaSujaCorona-env
+        region: us-east-1
         deployment_package: deploy.zip
