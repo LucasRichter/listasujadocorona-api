@@ -2,7 +2,9 @@ name: Deploy master
 on:
   push:
     branches:
-    - master
+      - master
+  watch:
+    types: [started]
     
 jobs:
   build:
