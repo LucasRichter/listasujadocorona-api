@@ -1,7 +1,11 @@
 const Politicans = require('../models/Politicans')
+const basicAuth = require('../middleware/basiAuth')
 
 Politicans
   .methods(['get', 'post', 'put', 'delete'])
+  .before('post', basicAuth())
+  .before('put')
+  .before('delete')
   .after('get', function (req, res, next) {
     const id = req.params.id
     if (req.params.id) {

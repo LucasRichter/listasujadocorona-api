@@ -9,6 +9,7 @@ var politicanSchema = new Schema({
 	party: { required: true, type: String },
 	twitter: { required: true, type: String },
 	website: { type: String },
+	slug: { type: String, required: true },
 	state: { required: true, enum: states, type: String  },
 	evidences: [{
 		description: { required: true, type: String },

@@ -9,6 +9,7 @@
  * @property {string} name.required - Unique politican name
  * @property {string} profilePicture.required - Link politican image
  * @property {string} party.required - Politican party. EX: PT, PSDB
+ * @property {string} slug.required - Politican party. EX: PT, PSDB
  * @property {string} state.required - Politican state. EX: RS, RJ, SP
  * @property {string} website
  * @property {Array.<Evidence>} evidences - Politican evidences
