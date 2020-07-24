@@ -26,3 +26,4 @@ jobs:
         environment_name: ListaSujaCorona-env
         region: us-east-1
         deployment_package: deploy.zip
+        version_label: 12345
