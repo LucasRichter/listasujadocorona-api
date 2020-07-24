@@ -5,25 +5,24 @@ on:
       - master
   watch:
     types: [started]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    
     - name: Checkout source code
       uses: actions/checkout@v1
 
     - name: Generate deployment package
-      run: zip deploy.zip src/* src/*/** package.json yarn.lock Dockerfile
-      
+      run: zip deploy.zip src/* src/*/** package.json yarn.lock
+
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v10
       with:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: ListaSujaCorona-api
-        environment_name: ListasujacoronaApi-prod
+        environment_name: ListasujacoronaApi-env
         region: us-east-1
         deployment_package: deploy.zip
         version_label: ${{ github.sha }}
