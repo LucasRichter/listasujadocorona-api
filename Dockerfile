@@ -8,7 +8,7 @@ COPY yarn.lock .
 
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
-RUN yarn install
+RUN yarn install --production
 
 # Expose the listening port of your app
 EXPOSE 80
