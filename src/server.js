@@ -30,7 +30,7 @@ expressSwagger(options)
 const rateLimit = require("express-rate-limit")
 
 if (process.env.NODE_ENV === 'production') {
-  app.set('trust proxy', 1)
+  server.set('trust proxy', 1)
 }
 
 const limiter = rateLimit({
