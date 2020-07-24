@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Generate deployment package
-      run: zip deploy.zip src/*/** package.json yarn.lock Dockerfile
+      run: zip deploy.zip src/* src/*/** package.json yarn.lock Dockerfile
       
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v10
