@@ -14,6 +14,14 @@ Politicans
     next()
   })
 
+Politicans.route('trending.get', function (req, res) {
+  Politicans
+    .find()
+    .sort({ pageView: -1 })
+    .limit(6)
+    .then(result => res.json(result))
+})
+
 Politicans.route(':slug', ['get'], function (req, res) {
   Politicans
     .findOneAndUpdate({ slug: req.params.slug }, { $inc: { pageView: 1 } })
@@ -27,13 +35,7 @@ Politicans.route(':slug', ['get'], function (req, res) {
 })
 
 
-Politicans.route('trending.get', function (req, res) {
-  Politicans
-    .find()
-    .sort({ pageView: -1 })
-    .limit(6)
-    .then(result => res.json(result))
-})
+
 
 module.exports = function (server) {
   Politicans
