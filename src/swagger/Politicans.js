@@ -26,10 +26,19 @@
 */
 
 /**
- * Get single politican. This will inscrease the pageView field in 1.
+ * Get single politican by id. This will inscrease the pageView field in 1.
  * @route GET /politicans/{id}
  * @group politicans: Politicos - Operations about politicans
  * @param {Politican.model} id.path.required
+ * @returns {Politican.model} 200 - An array of user info
+ * @returns {Error}  default - Unexpected error
+*/
+
+/**
+ * Get single politican by slug. This will inscrease the pageView field in 1.
+ * @route GET /politicans/{slug}
+ * @group politicans: Politicos - Operations about politicans
+ * @param {Politican.model} slug.path.required
  * @returns {Politican.model} 200 - An array of user info
  * @returns {Error}  default - Unexpected error
 */

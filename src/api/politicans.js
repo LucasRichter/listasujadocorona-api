@@ -14,6 +14,19 @@ Politicans
     next()
   })
 
+Politicans.route(':slug', ['get'], function (req, res) {
+  Politicans
+    .findOneAndUpdate({ slug: req.params.slug }, { $inc: { pageView: 1 } })
+    .then(result => {
+      if (!result) {
+        res.status(404).json({})
+      } else {
+        res.json(result)
+      }
+    })
+})
+
+
 Politicans.route('trending.get', function (req, res) {
   Politicans
     .find()
