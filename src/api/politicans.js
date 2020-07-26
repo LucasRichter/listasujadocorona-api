@@ -34,9 +34,6 @@ Politicans.route(':slug', ['get'], function (req, res) {
     })
 })
 
-
-
-
 module.exports = function (server) {
   Politicans
     .register(server, '/api/politicans')

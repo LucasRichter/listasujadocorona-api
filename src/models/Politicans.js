@@ -14,7 +14,7 @@ var politicanSchema = new Schema({
 	evidences: [{
 		description: { required: true, type: String },
 		source: { required: true, type: String },
-		tweetid: { type: String },
+		tweetId: { type: String },
 		link: { required: true, type: String }
 	}],
 	pageView: { type: Number, default: 0 }
