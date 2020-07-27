@@ -4,10 +4,7 @@ const { postTweet } = require('../services/Twitter')
 
 const afterPost = async (req, res, next) => {
   const { bundle } = res.locals
-  postTweet(`
-    ${bundle.name} (${bundle.twitter}) está na lista de políticos que apoiam medidas anti-ciência. ${process.env.API_DOMAIN}/detalhes/${bundle.slug} #ListaSujaDoCorona
-  `)
-
+  postTweet(bundle)
   next()
 }
 

@@ -8,6 +8,7 @@
     "start": "node src/server.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "eslint-config-standard": "^14.1.1",
@@ -21,6 +22,7 @@
     "morgan": "^1.10.0",
     "node-restful": "^0.2.6",
     "passport-instagram": "^1.0.0",
+    "promised-twit": "^0.1.0",
     "twit": "^2.2.11"
   },
   "devDependencies": {
