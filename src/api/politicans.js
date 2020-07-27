@@ -1,10 +1,18 @@
 const Politicans = require('../models/Politicans')
 const basicAuth = require('../middleware/basiAuth')
+const { postTweet } = require('../services/Twitter')
+
+const afterPost = async (req, res, next) => {
+  const { bundle } = res.locals
+  postTweet(bundle)
+  next()
+}
 
 Politicans
   .methods(['get', 'post', 'put', 'delete'])
   .before('post', basicAuth())
   .before('put')
+  .after('post', afterPost)
   .before('delete')
   .after('get', function (req, res, next) {
     const id = req.params.id
