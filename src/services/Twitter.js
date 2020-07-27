@@ -12,7 +12,7 @@ module.exports.postTweet = async (politician) => {
   const b64content = await getBase64(politician.profilePicture)
   const data = await T.postMediaUpload({ media_data: b64content })
   const status = `
-    ${politician.name} ${politician.twitter ? `(${politician.twitter})` : ' '}está na lista de políticos que apoiam medidas anti-ciência. ${process.env.SITE_DOMAIN}/detalhes/${politician.slug} #ListaSujaDoCorona
+    ${politician.name} ${politician.twitter ? `(${politician.twitter})` : ''} está na lista de políticos que apoiam medidas anti-ciência. ${process.env.SITE_DOMAIN}/detalhes/${politician.slug} #ListaSujaDoCorona
   `
   var mediaIdStr = data.media_id_string
   var params = { status, media_ids: [mediaIdStr] }
