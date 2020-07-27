@@ -20,7 +20,8 @@
     "mongoose": "^5.9.25",
     "morgan": "^1.10.0",
     "node-restful": "^0.2.6",
-    "passport-instagram": "^1.0.0"
+    "passport-instagram": "^1.0.0",
+    "twit": "^2.2.11"
   },
   "devDependencies": {
     "eslint": "^7.5.0",
